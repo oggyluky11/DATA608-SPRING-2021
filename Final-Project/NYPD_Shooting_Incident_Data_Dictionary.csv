@@ -1,0 +1,17 @@
+Column Name,Column Description
+INCIDENT_KEY,Randomly generated persistent ID for each incident 
+OCCUR_DATE,Exact date of the shooting incident
+OCCUR_TIME,Exact time of the shooting incident
+BORO,Borough where the shooting incident occurred
+PRECINCT,Precinct where the shooting incident occurred
+JURISDICTION_CODE,"Jurisdiction where the shooting incident occurred. Jurisdiction codes 0(Patrol), 1(Transit) and 2(Housing) represent NYPD whilst codes 3 and more represent non NYPD jurisdictions"
+LOCATION_DESC,Location of the shooting incident
+STATISTICAL_MURDER_FLAG,Shooting resulted in the victim’s death which would be counted as a murder
+PERP_AGE_GROUP,Perpetrator’s age within a category
+PERP_SEX,Perpetrator’s sex description
+PERP_RACE,Perpetrator’s race description
+VIC_AGE_GROUP,Victim’s age within a category
+VIC_SEX,Victim’s sex description
+VIC_RACE,Victim’s race description
+X_COORD_CD,"Midblock X-coordinate for New York State Plane Coordinate System, Long Island Zone, NAD 83, units feet (FIPS 3104)"
+Y_COORD_CD,"Midblock Y-coordinate for New York State Plane Coordinate System, Long Island Zone, NAD 83, units feet (FIPS 3104)"
