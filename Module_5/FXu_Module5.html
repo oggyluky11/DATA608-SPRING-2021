@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title>DATA 608 - Module 5</title>
+</head>
+
+
+<body>
+	<h1>DATA 608 - Module 5 Introduction to Javascript</h1>
+	<h2>Assignment 5 - Beginner</h2>
+	<h3><i>Fan Xu<br>Apr 18, 2021</i></h3>
+
+
+
+	<p>1. Create a function to reverse any word that you type in. This can be typed into either an input box or an alert box, and then print the result in a box or on the webpage.</p>	
+
+	<form>
+  		<label for="wordEntry">Please entry a word:</label><br>
+  		<input type="text" id="wordEntry" name="wordEntry">
+		<input type="button" value="Enter" onClick="wordInv();">
+	</form>
+	<p id = "wordInverse"></p><br>
+
+
+
+	<p>2. Create a function that takes an input number, and prints a table with the first 20 multiples of the number, in order 5x4</P>
+	<form>
+  		<label for="numEntry">Please entry a number:</label><br>
+  		<input type="number" id="numEntry" name="numEntry">
+		<input type="button" value="Enter" onClick="createTbl();">
+	</form>
+	<p id = "numTbl"></p><br>
+
+
+
+
+<script type="text/javascript">
+	function wordInv(){
+		var w = document.getElementById("wordEntry").value;
+		var wResponse = "Please enter a word string.";
+		if (w.trim()!=""){
+			var wInv = w.split("").reverse().join("");
+			wResponse = "The reverse of the input is: "+ wInv;
+		};
+		document.getElementById("wordInverse").innerHTML = wResponse;
+	};
+
+	
+	function createTbl(){
+		var num = parseFloat(document.getElementById("numEntry").value);
+		var numArray = Array(20).fill().map((element, index) => (index+1)*num);
+
+		var tbl = document.createElement("table");
+		var tblBody = document.createElement("tbody");
+		
+		for (var i = 1; i <= 5; i++){
+			var row = document.createElement("tr")
+			
+			for (var j = 1; j <= 4; j++){
+				var cell = document.createElement("td");
+				var cellVal = document.createTextNode(numArray[i+j-1]);
+				cell.appendChild(cellVal);
+				row.appendChild(cell);
+			}
+
+			tblBody.appendChild(row);
+		}
+
+		tbl.appendChild(tblBody);
+		tbl.setAttribute("border", "3");
+		
+		document.getElementById("numTbl").innerHTML="";
+		document.getElementById("numTbl").appendChild(tbl);
+	};
+</script>
+</body>
+</html>
